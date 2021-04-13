@@ -60,14 +60,12 @@ class SortedList {
   }
 
   avg() {
-    let total = this.items.reduce((acc, element, index)=>{
-      return (acc + element) / this.length
-  },0)
+  
   if (this.length == 0){
     throw new Error ('EmptySortedList')
-  }
-  return Math.ceil(total)
-  }
+    }
+  return this.sum()/this.length
+}
 }
 
 module.exports = SortedList;
